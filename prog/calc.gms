@@ -214,6 +214,8 @@ tumx_dec(R,I,L_CAPDEC)$(FL_IL(R,I,L_CAPDEC) and tumx_dec(R,I,L_CAPDEC) le 0)    
 
 tumx(R,I,ML)$sum(L$M_ML(ML,L),FL_IL(R,I,L))                     =tumx_t(R,I,ML,'%calc_year%');
 tumx(R,I,ML)$sum(L_CAPDEC$M_ML(ML,L_CAPDEC),FL_IL(R,I,L_CAPDEC) and tumx_dec(R,I,L_CAPDEC)) =sum(L_CAPDEC$M_ML(ML,L_CAPDEC),tumx_dec(R,I,L_CAPDEC));
+tumx(R,I,'ELECAP_SPVALL')$(%calc_year% ge 2005 and %calc_year% le 2025 and sum(L$M_ML('ELECAP_SPVALL',L),FL_IL(R,I,L)))   =tumx_t(R,I,'ELECAP_SPVALL','%calc_year%');
+tumx(R,I,'ELECAP_WINALL')$(%calc_year% ge 2005 and %calc_year% le 2025 and sum(L$M_ML('ELECAP_WINALL',L),FL_IL(R,I,L)))   =tumx_t(R,I,'ELECAP_WINALL','%calc_year%');
 tumn(R,I,ML)$sum(L$M_ML(ML,L),FL_IL(R,I,L))                     =tumn_t(R,I,ML,'%calc_year%');
 
 emtax(MQ,MG)                                                    =emtax_t(MQ,MG,'%calc_year%');
